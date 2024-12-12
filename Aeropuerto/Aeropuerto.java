@@ -5,8 +5,7 @@ public abstract class Aeropuerto
     private int id; 
     private String Nombre;
     private int AñoDeInauguración;
-    private int CapacidadTerminales;
-   
+    private int CapacidadTerminales;     
     public Aeropuerto(String Nombre,int AñoDeInauguración,int CapacidadTerminales) 
     {
         this.id = ++idCounter;
@@ -14,7 +13,6 @@ public abstract class Aeropuerto
         this.AñoDeInauguración = AñoDeInauguración;
         this.CapacidadTerminales = CapacidadTerminales;
     }
-
     public int getId() 
     {
         return id;
@@ -23,7 +21,6 @@ public abstract class Aeropuerto
     {
         this.id = id;
     }
-
     public String getNombre() 
     {
         return Nombre;
@@ -32,7 +29,6 @@ public abstract class Aeropuerto
     {
         this.Nombre = Nombre;
     }
-
     public int getAñoDeInauguración() 
     {
         return AñoDeInauguración;
@@ -41,7 +37,6 @@ public abstract class Aeropuerto
     {
         this.AñoDeInauguración = AñoDeInauguración;
     }
-
     public int getCapacidadTerminales() 
     {
         return CapacidadTerminales;
@@ -50,7 +45,6 @@ public abstract class Aeropuerto
     {
         this.CapacidadTerminales = CapacidadTerminales;
     }
-
     public static int getIdCounter() 
     {
         return idCounter;
@@ -59,14 +53,13 @@ public abstract class Aeropuerto
     {
         Aeropuerto.idCounter = idCounter;
     }        
-
     @Override
     public String toString() 
     {
         return  "\nid "+getId()
                 +"\nNombre "+getNombre()
                 +"\nAño De Inauguracion "+getAñoDeInauguración() 
-                +"\nCapacidad Terminales "+getCapacidadTerminales();
+                +"\nCapacidad Terminales "+getCapacidadTerminales()+"\n";
     }
     public abstract void gananciasTotales(int cantidad);                  
 }
